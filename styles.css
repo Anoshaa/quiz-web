@@ -1,0 +1,194 @@
+body {
+    background-image: url(https://backgroundabstract.com/wp-content/uploads/edd/2022/04/vecteezy_Lavender-Lilac-Background-2_ir1020__generated-e1655987350100.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+}
+
+.quiz-container {
+    max-width: 500px;
+    margin: 2em auto;
+    padding: 2em;
+    background: linear-gradient(135deg, #1e0033 20%, #3d0066 40%, #5c0099 60%);
+    box-shadow: 0px 0px 20px white;
+    border-radius: 8px;
+    color: white;
+}
+
+.quiz-title {
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 1em;
+    font-size:40px;
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 20px;
+}
+/* Default background for input fields */
+input.form-control {
+    background-color: transparent; /* Transparent background when not typing */
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    box-shadow: none;
+    font-size: 20px;
+}
+
+/* Background becomes white when typing */
+input.form-control:focus {
+    background-color: white; /* White background while typing */
+    color: black; /* Change text color to black when typing */
+    border-color: #8e04b1;
+    box-shadow: 0 0 0 2px #5c0099;
+}
+input.form-control.typing {
+    background-color: white; /* Ensure it stays white while typing */
+    color: black; /* Change text color to black */
+}
+
+
+/* Remove red background on typing */
+input.form-control.typing {
+    background-color: white; /* Keep it white when typing */
+}
+
+.button {
+    display: block;
+    margin: 20px auto 0;
+    background-color:#8e04b1;
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    border: solid 3px white;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.button:hover {
+    background-color: white;
+    color:#8e04b1;
+    border-color: #8e04b1;
+    border: solid 3px;
+}
+
+#options-container .btn {
+    background: linear-gradient(135deg, #1e0033 20%, #3d0066 40%, #5c0099 60%); /* Gradient background */
+    border-radius: 0;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
+#options-container .btn:hover {
+    background: white !important; /* Slight white on hover */
+    color:#8e04b1 ;
+}
+
+.btn.selected {
+    background: white !important; /* White background when selected */
+    color:#8e04b1 !important; /* Red text when selected */
+    border-color: #8e04b1 !important; /* Red border when selected */
+}
+
+.btn.selected::after {
+    content: '✔';
+    font-size: 1.2em;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#question-text {
+    font-size: 20px; /* Adjust the size as needed */
+}
+
+
+
+.score-container {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 20px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white !important;
+    background-color: transparent;
+    margin: 20px auto;
+}
+
+.score-text {
+    font-size: 50px;
+    font-weight: bold;
+}
+.score-heading {
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 1em;
+    font-size:40px;
+}
+.score-remarks {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+.swal2-container {
+    z-index: 2000; /* Ensure it stays above other elements */
+}
+
+.swal2-popup {
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 90%; /* Ensures alert scales on smaller screens */
+    margin: auto;
+}
+
+#loader {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+
+
+  
+

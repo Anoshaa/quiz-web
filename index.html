@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+      <!-- User Info Form -->
+<div id="user-info-form" class="quiz-container">
+    <h2 class="quiz-title">Enter Your Details</h2>
+    <form id="user-form">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+   
+        <button type="submit" class="button">Start Quiz</button>
+        <!-- Loader below the submit button -->
+        <div id="loader" style="display: none; text-align: center; margin-top: 20px;">
+            <div class="spinner-border text-white" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+        <!-- Quiz Section -->
+        <div id="quiz-section" class="quiz-container" style="display: none;">
+            <h2 class="quiz-title">Quiz</h2>
+            <div id="question-section">
+                <p id="question-text"></p>
+                <div id="options-container" class="btn-group-vertical w-100"></div>
+            </div>
+            <button id="next-btn" class="button">Next</button>
+            <button id="submit-btn" class="button" style="display: none;">Submit</button>
+        </div>
+
+<!-- Results Section -->
+<div id="results-container" class="quiz-container" style="display:none;">
+    <div class="score-background">
+        <div class="score-container">
+            <div class="score-text">${score} / ${questions.length}</div>          
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
